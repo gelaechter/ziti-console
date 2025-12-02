@@ -24,6 +24,7 @@ import {
   ConfigTypesPageComponent,
   ZacWrapperComponent,
   IdentitiesPageComponent,
+  ZitiBoxesPageComponent,
   DeactivateGuardService,
   EdgeRoutersPageComponent,
   ServicesPageComponent,
@@ -104,6 +105,13 @@ const routes: Routes = [
   {
     path: 'identities/:id',
     component: IdentityFormComponent,
+    canActivate: mapToCanActivate([AuthenticationGuard]),
+    canDeactivate: [DeactivateGuardService],
+    runGuardsAndResolvers: 'always',
+  },
+  {
+    path: 'ziti-boxes',
+    component: ZitiBoxesPageComponent,
     canActivate: mapToCanActivate([AuthenticationGuard]),
     canDeactivate: [DeactivateGuardService],
     runGuardsAndResolvers: 'always',

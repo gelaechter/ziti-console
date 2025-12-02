@@ -10,6 +10,8 @@ export * from './lib/features/wrappers/zac-wrapper-service.class';
 export * from './lib/features/wrappers/node-wrapper.service';
 export * from './lib/pages/identities/identities-page.component';
 export * from './lib/pages/identities/identities-page.service';
+export * from './lib/pages/ziti-boxes/ziti-boxes-page.component';
+export * from './lib/pages/ziti-boxes/ziti-boxes-page.service';
 export * from './lib/pages/edge-routers/edge-routers-page.component';
 export * from './lib/pages/edge-routers/edge-routers-page.service';
 export * from './lib/pages/transit-routers/transit-routers-page.component';

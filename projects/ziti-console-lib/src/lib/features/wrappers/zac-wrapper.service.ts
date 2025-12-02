@@ -277,6 +277,11 @@ export class ZacWrapperService extends ZacWrapperServiceClass {
                 this.page = 'settings';
                 route = this.URLS.ZITI_SETTINGS;
                 break;
+            case '/ziti-boxes':
+            case 'ziti-boxes':
+                this.page = 'identities';
+                route = this.URLS.ZITI_BOXES;
+                break;
             default:
                 this.page = 'index';
                 route = this.URLS.ZITI_DASHBOARD;
@@ -365,6 +370,9 @@ export class ZacWrapperService extends ZacWrapperServiceClass {
                         break;
                     case this.URLS.ZITI_SETTINGS:
                         this.page = 'settings';
+                        break;
+                    case this.URLS.ZITI_BOXES:
+                        this.page = 'ziti-boxes';
                         break;
                     default:
                         this.page = 'index';

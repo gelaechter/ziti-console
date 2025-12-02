@@ -1,0 +1,48 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Run server.js",
+            "type": "shell",
+            "command": " nvm use 18 && ZAC_CONTROLLER_URLS=https://ziti.pommer.info:1280 node server.js",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch ziti-console-lib",
+            "type": "shell",
+            "command": "nvm use 18 && ng build ziti-console-lib --watch",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Watch ziti-console-node",
+            "type": "shell",
+            "command": "nvm use 18 && ng build ziti-console-node --watch",
+            "presentation": {
+                "reveal": "always",
+                "panel": "dedicated"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Ziti Console Dev Mode",
+            "dependsOn": [
+                "Watch ziti-console-lib",
+                "Watch ziti-console-node",
+                "Run server.js"
+            ],
+            "dependsOrder": "parallel",
+            "runOptions": {
+                "runOn": "folderOpen"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

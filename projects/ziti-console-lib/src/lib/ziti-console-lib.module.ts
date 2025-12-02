@@ -133,6 +133,7 @@ import {APISessionFormComponent} from "./features/projectable-forms/api-session/
 import {CallbackComponent} from "./pages/callback/callback.component";
 import {ProgressMeterComponent} from "./features/progress-meter/progress-meter.component";
 import {ProgressWizardComponent} from "./features/progress-wizard/progress-wizard.component";
+import { ZitiBoxesPageComponent } from './pages/ziti-boxes/ziti-boxes-page.component';
 
 export function playerFactory() {
     return import(/* webpackChunkName: 'lottie-web' */ 'lottie-web');
@@ -163,6 +164,7 @@ export function playerFactory() {
         FilterBarComponent,
         ListPageFormComponent,
         IdentitiesPageComponent,
+        ZitiBoxesPageComponent,
         EdgeRoutersPageComponent,
         TransitRoutersPageComponent,
         DataTableComponent,
@@ -278,6 +280,7 @@ export function playerFactory() {
         EdgeRouterFormComponent,
         TransitRouterFormComponent,
         IdentitiesPageComponent,
+        ZitiBoxesPageComponent,
         EdgeRoutersPageComponent,
         TransitRoutersPageComponent,
         ServicesPageComponent,
